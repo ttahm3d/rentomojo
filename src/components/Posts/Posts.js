@@ -3,26 +3,24 @@ import { useQuery } from 'react-query';
 import Post from './Post/Post'
 import axios from 'axios'
 
-const queryString = require('query-string');
-const getPostsByUserId = async () => {
-	return await (await axios.get(`/posts?userId=${1}`)
-		.then(({ data }) => data)
-	)
+const getPostsByUserId = async ({queryKey}) => {
+	const [_key, {userId}] = queryKey;
+	const response = await axios.get(
+		`https://jsonplaceholder.typicode.com/posts?userId=${userId}`
+	);
+	return response.data;
 };
 
 const Posts = (props) => {
-	const { data, isLoading, error } = useQuery("posts", getPostsByUserId)
 	const search = props.location.search; // could be '?foo=bar'
 	const params = new URLSearchParams(search);
-	const foo = params.get('userId');
-
-	// const test = qs.parse(location.search, { ignoreQueryPrefix: true }).userId
-	// console.log(data)
-	console.log(foo)
+	const userId = params.get('userId');
+	const { data, isLoading, error } = useQuery(["posts", {userId}], getPostsByUserId)
+	
 	return (
 		<div>
+			{isLoading && <p>Loading</p>}
 			<ul>
-				{isLoading && <p>Loadin</p>}
 				{data && data.map(post => (<Post key={post.id} post={post} />))}
 			</ul>
 		</div>
