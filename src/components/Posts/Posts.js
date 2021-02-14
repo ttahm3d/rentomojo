@@ -23,7 +23,7 @@ const Posts = (props) => {
   return (
     <div>
       {isLoading && <p>Loading</p>}
-      <ul>{data && data.map((post) => <Post key={post.id} post={post} />)}</ul>
+      <ul>{data && <Post posts={data} />}</ul>
     </div>
   );
 };
