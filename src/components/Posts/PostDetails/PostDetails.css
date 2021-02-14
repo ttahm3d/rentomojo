@@ -4,6 +4,7 @@
   width: 80vw;
   margin: 0 auto;
   font-size: 1.6rem;
+  padding-bottom: 2rem;
 }
 
 .details-wrapper h3 {
@@ -18,7 +19,7 @@
 }
 
 .post-body {
-  width: 60vw;
+  width: 80vw;
   color: var(--secondary-font);
 }
 
@@ -42,4 +43,21 @@
 
 button:focus {
   outline: none;
+}
+
+/* -------- Media Queries -------- */
+/* mobile */
+@media (max-width: 767px) {
+  .details-wrapper,
+  .post-body {
+    width: 90vw;
+  }
+}
+
+/* tabs */
+@media (min-width: 768px) and (max-width: 991px) {
+  .details-wrapper,
+  .post-body {
+    width: 90vw;
+  }
 }

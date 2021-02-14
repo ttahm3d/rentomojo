@@ -40,3 +40,18 @@
 .post-wrapper > a:hover {
   color: var(--primary-bg-shade-two);
 }
+
+@media (max-width: 767px) {
+  .post-wrapper {
+    width: 90vw;
+    padding: 0 0 2rem;
+  }
+}
+
+/* tabs */
+@media (min-width: 768px) and (max-width: 991px) {
+  .post-wrapper {
+    width: 90vw;
+    padding: 0 0 2rem;
+  }
+}

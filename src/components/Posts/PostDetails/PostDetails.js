@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Comments from "../Comments/Comments";
 import { Redirect } from "react-router-dom";
 import { useQuery } from "react-query";
@@ -25,6 +27,9 @@ const PostDetails = (props) => {
     const response = await axios.delete(`/posts/${id}`);
     if (response.status === 200) {
       setdeleted(true);
+      toast.success("Sucessfully deleted the post!!!", {
+        position: toast.POSITION.BOTTOM_RIGHT,
+      });
     }
   };
 

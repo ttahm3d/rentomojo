@@ -14,7 +14,7 @@
 }
 
 .email {
-  color: var(--text-main-shade-one);
+  color: var(--text-third);
   font-weight: 500;
   font-size: 1rem;
   margin-top: 0.5rem;
@@ -23,4 +23,23 @@
 .comments {
   border-bottom: 1px solid var(--secondary-font-shade-one);
   padding: 1.2rem 0;
+}
+
+.comments:last-child {
+  border: none;
+}
+
+/* -------- Media Queries -------- */
+/* mobile */
+@media (max-width: 767px) {
+  .comment-container {
+    width: 90vw;
+  }
+}
+
+/* tabs */
+@media (min-width: 768px) and (max-width: 991px) {
+  .comment-container {
+    width: 90vw;
+  }
 }
