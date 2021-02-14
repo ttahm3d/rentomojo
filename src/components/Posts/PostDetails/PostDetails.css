@@ -1,0 +1,45 @@
+@import "../../../theme.css";
+
+.details-wrapper {
+  width: 80vw;
+  margin: 0 auto;
+  font-size: 1.6rem;
+}
+
+.details-wrapper h3 {
+  font-size: 2.2rem;
+  color: var(--text-main);
+}
+
+.title-delete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-body {
+  width: 60vw;
+  color: var(--secondary-font);
+}
+
+.details-wrapper button {
+  border: none;
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-family: inherit;
+  border-radius: 2rem;
+}
+
+.delete {
+  background-color: red;
+  color: var(--primary-bg);
+}
+
+.comment {
+  background-color: var(--text-third);
+  color: var(--primary-bg);
+}
+
+button:focus {
+  outline: none;
+}

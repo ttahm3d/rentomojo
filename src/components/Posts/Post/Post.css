@@ -10,11 +10,12 @@
 }
 
 .post-wrapper {
-  box-shadow: 0 0 10px var(--primary-bg-shade-three);
-  border-radius: 2rem;
+  /* box-shadow: 0 0 10px var(--primary-bg-shade-three);
+  border-radius: 2rem; */
+  border-bottom: 1px solid var(--secondary-font);
   display: block;
   padding: 2.5rem;
-  width: 60vw;
+  width: 70vw;
   margin: 1rem;
 }
 
@@ -22,20 +23,20 @@
   font-size: 2rem;
   font-weight: 600;
   margin: 0 auto 1.5rem;
-  color: var(--text-main);
+  color: var(--primary-font);
 }
 
 .post-wrapper > a {
   text-decoration: none;
   font-size: 1.2rem;
   border-radius: 1rem;
-  color: var(--primary-font);
   padding: 0.8rem 1.2rem;
+  background-color: var(--text-main);
+  color: var(--primary-bg);
   border: 1px solid var(--text-main);
   transform: color 0.8s ease-in;
 }
 
 .post-wrapper > a:hover {
-  background-color: var(--text-main);
-  color: var(--primary-bg);
+  color: var(--primary-bg-shade-two);
 }

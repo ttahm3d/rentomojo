@@ -2,6 +2,8 @@ import React from "react";
 import axios from "axios";
 import { useQuery } from "react-query";
 
+import "./Comment.css";
+
 const getCommentsByPostId = async ({ queryKey }) => {
   const [_key, { postId }] = queryKey;
   const response = await axios.get(`comments?postId=${postId}`);
@@ -15,7 +17,7 @@ const Comments = ({ postId }) => {
   );
 
   return (
-    <div>
+    <div className="comment-container">
       {data &&
         data.map((comment) => (
           <Comment
@@ -31,10 +33,13 @@ const Comments = ({ postId }) => {
 
 const Comment = ({ body, email, name }) => {
   return (
-    <div>
-      <p>{name}</p>
-      <p>{body}</p>
-      <p>{email}</p>
+    <div className="comments">
+      <p className="name">{name}</p>
+      <p className="email">{email}</p>
+      <p className="comment-body">
+        {body}
+        {body}
+      </p>
     </div>
   );
 };

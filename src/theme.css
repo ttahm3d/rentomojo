@@ -23,5 +23,7 @@
 
   /*Accent Colors*/
   --text-main: #ff4154;
-  --text-second: #db2777;
+  --text-main-shade-one: #fc6675;
+  --text-second: #fabc05;
+  --text-third: #3e3bff;
 }

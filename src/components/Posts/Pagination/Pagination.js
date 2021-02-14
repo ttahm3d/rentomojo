@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./Pagination.css";
+
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   const pageNumbers = [];
 
@@ -9,7 +11,7 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
 
   return (
     <div>
-      <ul>
+      <ul className="pagination-container">
         {pageNumbers.map((number) => (
           <li key={number}>
             <button onClick={() => paginate(number)} href="!#">

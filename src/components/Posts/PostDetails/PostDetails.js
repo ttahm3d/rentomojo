@@ -4,6 +4,8 @@ import Comments from "../Comments/Comments";
 import { Redirect } from "react-router-dom";
 import { useQuery } from "react-query";
 
+import "./PostDetails.css";
+
 const getPostDetails = async ({ queryKey }) => {
   const [_key, { postId }] = queryKey;
   const response = await axios.get(`/posts/${postId}`);
@@ -34,15 +36,30 @@ const PostDetails = (props) => {
       {isLoading && <p>Loading .....</p>}
       {error && <p>Error in fetching data</p>}
       {data ? (
-        <div>
-          <h3>{data.title}</h3>
-          <p>{data.body}</p>
+        <div className="details-wrapper">
+          <div className="title-delete">
+            <h3>{data.title}</h3>
+            <button className="delete" onClick={() => deletePost(data.id)}>
+              Delete
+            </button>
+          </div>
+          <div className="post-body">
+            <p>
+              {data.body} {data.body} {data.body}
+            </p>
+            <p>
+              {data.body} {data.body}
+            </p>
+          </div>
+          <button
+            className="comment"
+            onClick={() => setshowComments(!showComments)}
+          >
+            {!showComments ? "View Comments" : "Hide Comments"}
+          </button>
         </div>
       ) : null}
-      <button onClick={() => deletePost(data.id)}>Delete</button>
-      <button onClick={() => setshowComments(!showComments)}>
-        {!showComments ? <p>View Comments</p> : <p>Hide Comments</p>}
-      </button>
+
       {showComments && <Comments postId={postId} />}
     </div>
   );
