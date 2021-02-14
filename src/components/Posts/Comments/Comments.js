@@ -3,6 +3,7 @@ import axios from "axios";
 import { useQuery } from "react-query";
 
 import "./Comment.css";
+import Spinner from "../../Spinner/Spinner";
 
 const getCommentsByPostId = async ({ queryKey }) => {
   const [_key, { postId }] = queryKey;
@@ -18,6 +19,7 @@ const Comments = ({ postId }) => {
 
   return (
     <div className="comment-container">
+      {isLoading && <Spinner />}
       {data &&
         data.map((comment) => (
           <Comment

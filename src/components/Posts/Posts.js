@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
-import Loader from "../Loader/Loader";
+import Spinner from "../Spinner/Spinner";
 import Post from "./Post/Post";
 import axios from "axios";
 
@@ -22,7 +22,7 @@ const Posts = (props) => {
 
   return (
     <div>
-      {isLoading && <p>Loading</p>}
+      {isLoading && <Spinner />}
       {data && <Post posts={data} />}
     </div>
   );

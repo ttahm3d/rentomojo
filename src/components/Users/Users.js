@@ -5,6 +5,7 @@ import axios from "axios";
 import User from "./User/User";
 
 import "./Users.css";
+import Spinner from "../Spinner/Spinner";
 const getUsers = async () =>
   await await axios.get("/users").then(({ data }) => data);
 
@@ -13,18 +14,23 @@ const Users = () => {
 
   return (
     <div className="container flex center table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Company</th>
-            <th>Posts</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data && data.map((user) => <User key={user.id} user={user} />)}
-        </tbody>
-      </table>
+      {isLoading && <Spinner />}
+      {data && (
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Company</th>
+              <th>Posts</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map((user) => (
+              <User key={user.id} user={user} />
+            ))}
+          </tbody>
+        </table>
+      )}
     </div>
   );
 };

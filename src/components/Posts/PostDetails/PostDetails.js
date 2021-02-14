@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { toast, ToastContainer } from "react-toastify";
+import { toast } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 import Comments from "../Comments/Comments";
 import { Redirect } from "react-router-dom";
 import { useQuery } from "react-query";
+
+import Spinner from "../../Spinner/Spinner";
 
 import "./PostDetails.css";
 
@@ -38,7 +41,7 @@ const PostDetails = (props) => {
       {data && deleted ? (
         <Redirect to={`/posts?userId=${data.userId}`} />
       ) : null}
-      {isLoading && <p>Loading .....</p>}
+      {isLoading && <Spinner />}
       {error && <p>Error in fetching data</p>}
       {data ? (
         <div className="details-wrapper">

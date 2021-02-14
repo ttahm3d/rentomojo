@@ -25,3 +25,10 @@ header h1 {
   margin: 0;
   padding: 1rem;
 }
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
