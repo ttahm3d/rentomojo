@@ -11,8 +11,6 @@ const getPostsByUserId = async ({ queryKey }) => {
 };
 
 const Posts = (props) => {
-  const [postId, setpostId] = useState(-1);
-
   const search = props.location.search;
   const params = new URLSearchParams(search);
   const userId = params.get("userId");
