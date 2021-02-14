@@ -23,7 +23,7 @@ const Posts = (props) => {
   return (
     <div>
       {isLoading && <p>Loading</p>}
-      <ul>{data && <Post posts={data} />}</ul>
+      {data && <Post posts={data} />}
     </div>
   );
 };

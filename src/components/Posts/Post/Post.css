@@ -1,0 +1,41 @@
+@import "../../../theme.css";
+
+.post-container {
+  width: 90vw;
+  margin: 0 auto;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-wrapper {
+  box-shadow: 0 0 10px var(--primary-bg-shade-three);
+  border-radius: 2rem;
+  display: block;
+  padding: 2.5rem;
+  width: 60vw;
+  margin: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 auto 1.5rem;
+  color: var(--text-main);
+}
+
+.post-wrapper > a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 1rem;
+  color: var(--primary-font);
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--text-main);
+  transform: color 0.8s ease-in;
+}
+
+.post-wrapper > a:hover {
+  background-color: var(--text-main);
+  color: var(--primary-bg);
+}

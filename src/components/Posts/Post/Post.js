@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Pagination from "../Pagination/Pagination";
 import { NavLink } from "react-router-dom";
 
+import "./Post.css";
+
 const Post = ({ posts }) => {
   //pagination
   const [currentPage, setcurrentPage] = useState(1);
@@ -14,19 +16,21 @@ const Post = ({ posts }) => {
   const paginate = (pageNumber) => setcurrentPage(pageNumber);
 
   return (
-    <div>
-      {currentPosts.map((post) => (
-        <div>
-          <p>{post.title}</p>
-          <NavLink to={"/posts/" + post.id}>View Details</NavLink>
-        </div>
-      ))}
+    <>
       <Pagination
         postsPerPage={postsPerPage}
         totalPosts={posts.length}
         paginate={paginate}
       />
-    </div>
+      <div className="post-container ">
+        {currentPosts.map((post) => (
+          <div className="post-wrapper" key={post.id}>
+            <p className="title">{post.title}</p>
+            <NavLink to={"/posts/" + post.id}>Read More</NavLink>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
