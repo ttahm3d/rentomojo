@@ -8,9 +8,11 @@ import "./App.css";
 const App = () => {
   return (
     <BrowserRouter>
-      <NavLink to="/">
-        <h1>DummyBlog</h1>
-      </NavLink>
+      <header className="logo">
+        <NavLink to="/">
+          <h1>DummyBlog</h1>
+        </NavLink>
+      </header>
       <Switch>
         <Route path="/" exact component={Users} />
         <Route path="/users" exact component={Users} />

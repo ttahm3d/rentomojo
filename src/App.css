@@ -1,3 +1,5 @@
+@import "./theme.css";
+
 .App {
   display: flex;
   flex-direction: column;
@@ -10,4 +12,24 @@ th,
 td {
   border: 1px solid black;
   border-collapse: collapse;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--navbar-box-shadow);
+  background-color: var(--navbar-bg);
+}
+
+header a {
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+header h1 {
+  text-shadow: 2px 2px #313030;
+  font-size: 3.6rem;
+  margin: 0;
+  padding: 1rem;
 }
