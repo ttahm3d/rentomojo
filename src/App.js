@@ -10,7 +10,7 @@ const App = () => {
     <BrowserRouter>
       <header className="logo">
         <NavLink to="/">
-          <h1>DummyBlog</h1>
+          <h1>Dummy Blog</h1>
         </NavLink>
       </header>
       <Switch>

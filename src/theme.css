@@ -1,7 +1,25 @@
 :root {
   /* Header Colors */
-  --navbar-shadow-box: 0 0 30px 0 rgba(0, 0, 0, 0.2);
+  --header-text-shadow: 2px 2px #f8792f;
   --navbar-bg: #002c4b;
+
+  /* Background colors */
+  --primary-bg: #f9fafb;
+  --primary-bg-shade-one: #f2f3f4;
+  --primary-bg-shade-two: #d5dbdb;
+  --primary-bg-shade-three: #b2babb;
+  --secondry-bg: #bfc9ca;
+  --secondry-bg-shade-one: #99a3a4;
+  --secondry-bg-shade-two: #34495e;
+  --secondry-bg-shade-three: #273746;
+
+  /* text colors */
+  --primary-font: #000000;
+  --primary-font-shade-one: #121212;
+  --primary-font-shade-two: #282828;
+  --secondary-font: #313131;
+  --secondary-font-shade-one: #434343;
+  --seondary-font-shade-two: #575757;
 
   /*Accent Colors*/
   --text-main: #ff4154;

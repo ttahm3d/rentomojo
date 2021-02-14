@@ -7,18 +7,10 @@
   justify-content: center;
 }
 
-table,
-th,
-td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: var(--navbar-box-shadow);
   background-color: var(--navbar-bg);
 }
 
@@ -28,7 +20,7 @@ header a {
 }
 
 header h1 {
-  text-shadow: 2px 2px #313030;
+  text-shadow: var(--header-text-shadow);
   font-size: 3.6rem;
   margin: 0;
   padding: 1rem;

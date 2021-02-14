@@ -4,6 +4,7 @@ import axios from "axios";
 
 import User from "./User/User";
 
+import "./Users.css";
 const getUsers = async () =>
   await await axios.get("/users").then(({ data }) => data);
 
@@ -11,7 +12,7 @@ const Users = () => {
   const { data, isLoading, error } = useQuery("users", getUsers);
 
   return (
-    <div>
+    <div className="container flex center table-container">
       <table>
         <thead>
           <tr>

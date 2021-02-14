@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
-import { useParams } from "react-router-dom";
+import Loader from "../Loader/Loader";
 import Post from "./Post/Post";
 import axios from "axios";
 

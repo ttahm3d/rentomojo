@@ -1,0 +1,34 @@
+@import "../../theme.css";
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+}
+
+.table-container {
+  padding: 4rem;
+  font-size: 1.6rem;
+}
+
+table,
+th,
+td {
+  border: 1px solid var(--primary-font);
+  border-collapse: collapse;
+  padding: 1rem;
+}
+
+th {
+  background-color: var(--secondry-bg-shade-three);
+  color: var(--primary-bg-shade-one);
+  font-weight: 500;
+}

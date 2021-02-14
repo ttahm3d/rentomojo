@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import "./User.css";
+
 const User = ({ user }) => {
   return (
     <>
