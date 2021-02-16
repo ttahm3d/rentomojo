@@ -15,6 +15,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--primary-bg);
   color: var(--primary-font);
+  transition: background 0.5s linear;
 }
 
 h1,
