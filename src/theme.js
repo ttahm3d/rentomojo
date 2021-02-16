@@ -63,4 +63,7 @@ export const GlobalStyle = createGlobalStyle`
     border-bottom: 1px solid ${(props) => props.theme.secondayFont};
   }
   
+  .comments {
+    border-bottom: 1px solid ${(props) => props.theme.secondayFont};
+  }  
 `;
