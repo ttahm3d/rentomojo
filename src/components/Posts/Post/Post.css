@@ -10,8 +10,6 @@
 }
 
 .post-wrapper {
-  /* box-shadow: 0 0 10px var(--primary-bg-shade-three);
-  border-radius: 2rem; */
   border-bottom: 1px solid var(--secondary-font);
   display: block;
   padding: 2.5rem;
